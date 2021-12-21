@@ -43,7 +43,7 @@ pipeline {
             echo double quote multiline: ${params.SOME_STRING}
             
             
-            sleep 15
+            #sleep 15
             
         """
          
