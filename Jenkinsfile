@@ -8,6 +8,9 @@
 		  }
 		}
 		stage("Evaluate Master") {
+			
+		  checkout scm 
+			
 		  when {
 			// skip this stage unless on Master branch
 			branch "master"
