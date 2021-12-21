@@ -18,7 +18,7 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr:'1'))
     disableConcurrentBuilds()
     skipDefaultCheckout(true)
-    timeout(time: 5, unit: 'MINUTES')
+    timeout(time: 10, unit: 'SECONS')
     timestamps()
   }
 
@@ -41,6 +41,10 @@ pipeline {
         
         sh"""
             echo double quote multiline: ${params.SOME_STRING}
+            
+            
+            sleep 10
+            
         """
          
       }
