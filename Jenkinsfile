@@ -1,23 +1,29 @@
-//Jenkinsfile
-
-pipeline{
+	pipeline{
 	
 		agent {
-			label 'java'
+			label 'master'
 		}
 		
 		stages{
 		
-			stage('build'){
+			stage('linux'){
 			
+				agent {
+					label 'maven'
+				}
+					
 				steps{
 					println "From decalarative pipeline script - build stage"
 				}
 			
 			}
 			
-			stage('deploy'){
+			stage('windows'){
 			
+				agent {
+					label 'dotnet'
+				}
+				
 				steps{
 					println "From decalarative pipeline script - deploy stage"
 				}
